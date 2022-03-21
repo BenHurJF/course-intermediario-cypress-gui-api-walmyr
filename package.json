@@ -1,0 +1,17 @@
+{
+  "name": "intermediario-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.4.1",
+    "cypress-xpath": "^1.6.2",
+    "faker": "^5.5.3"
+  }
+}

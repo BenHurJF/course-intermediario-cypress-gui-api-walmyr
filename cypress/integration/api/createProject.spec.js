@@ -2,9 +2,9 @@
 
 const faker = require('faker')
 
-describe('Create Issues', () => {
+describe('Create Project', () => {
 
-    it('Successfuly Issues :)', () => {
+    it('Successfuly Projects :)', () => {
         const project = {
             name: `project-${faker.random.uuid()}`,
             description: faker.random.words(4)

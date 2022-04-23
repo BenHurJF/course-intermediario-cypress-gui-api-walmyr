@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 
 Cypress.Commands.add('login', () => {
-    cy.visit('users/sign_in')
+     cy.visit('users/sign_in')
 
-    cy.xpath('//input[@id="user_login"]', {timeout:10000}).type(Cypress.env('user_name')) // OU -> data-qa-selector="login_field"
-    cy.xpath('//input[@id="user_password"]', {timeout:10000}).type(Cypress.env('user_password')) // OU -> data-qa-selector="password_field"
-    cy.xpath('//input[@type="submit"]').eq(0).click() // OU -> data-qa-selector="sign_in_button"
+     cy.xpath('//input[@id="user_login"]', { timeout: 10000 }).type(Cypress.env('user_name')) // OU -> data-qa-selector="login_field"
+     cy.xpath('//input[@id="user_password"]', { timeout: 10000 }).type(Cypress.env('user_password')) // OU -> data-qa-selector="password_field"
+     cy.xpath('//input[@type="submit"]').eq(0).click() // OU -> data-qa-selector="sign_in_button"
 })
 
 Cypress.Commands.add('logout', () => {
@@ -34,5 +34,9 @@ Cypress.Commands.add('gui_setLabelOnIssue', label => {
      cy.get('.qa-edit-link-labels').click()
      cy.contains(label.name).click()
      cy.get('body').click()
-   })
-   
+})
+
+Cypress.Commands.add('gui_setMilestoneOnIssue', milestone => {
+     cy.get('.block.milestone .edit-link').click()
+     cy.contains(milestone.title).click()
+})

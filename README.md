@@ -5,3 +5,4 @@
 2. Run the command "npx cypress open" to open cypress interface
 -
 3. Run tests spec's
+-
